@@ -54,6 +54,8 @@ function placeInTable(y, x) {
 }
 
 function endGame(msg) {
+	const top = document.querySelector('#column-top');
+	top.removeEventListener('click', handleClick);
 	setTimeout(function() {
 		alert(msg);
 	}, 200);
